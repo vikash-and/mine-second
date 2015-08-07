@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Spring Tutorials
 ================
 
@@ -12,3 +13,7 @@ Any IDE can be used to work with the projects, but if you're using Eclipse, cons
 
 - import the included **formatter** in Eclipse: 
 `https://github.com/eugenp/tutorials/tree/master/eclipse`
+=======
+# mine-second
+new regitrartion project with new features
+>>>>>>> branch 'master' of https://github.com/vikash-and/mine-second.git
