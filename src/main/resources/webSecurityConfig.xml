@@ -5,6 +5,7 @@
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+		
 	<http use-expressions="true">
 		<intercept-url pattern="/login*" access="permitAll" />
 		<intercept-url pattern="/logout*" access="permitAll" />
@@ -31,14 +32,14 @@
 	</http>
 
 	<beans:bean id="myAuthenticationSuccessHandler"
-		class="org.baeldung.security.MySimpleUrlAuthenticationSuccessHandler" />
+		class="org.reglogin.security.MySimpleUrlAuthenticationSuccessHandler" />
 	<authentication-manager>
 		<authentication-provider ref="authProvider"/>
 	</authentication-manager>
 	<beans:bean id="authProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"> 
 		<beans:property name="userDetailsService" ref="userDetailsService" /> <beans:property 
 		name="passwordEncoder" ref="encoder" /> </beans:bean>
-	<beans:bean id="userDetailsService" class="org.baeldung.security.MyUserDetailsService" />
+	<beans:bean id="userDetailsService" class="org.reglogin.security.MyUserDetailsService" />
 	<beans:bean id="encoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
 		<beans:constructor-arg name="strength" value="11" />
